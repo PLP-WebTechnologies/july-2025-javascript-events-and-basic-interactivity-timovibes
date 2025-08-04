@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Interactive Web Experience</h1>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Interactive Counter Section -->
+        <section class="counter-section">
+            <h2>Interactive Counter Game</h2>
+            <div class="counter-container">
+                <div class="counter-display">
+                    <span id="counterValue">0</span>
+                </div>
+                <div class="counter-controls">
+                    <button id="decrementBtn" class="counter-btn">-</button>
+                    <button id="incrementBtn" class="counter-btn">+</button>
+                    <button id="resetBtn" class="counter-btn reset">Reset</button>
+                </div>
+                <div class="counter-stats">
+                    <p>Clicks: <span id="clickCount">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabbed Interface Section -->
+        <section class="tabs-section">
+            <h2>Project Showcase</h2>
+            <div class="tabs-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="web">Web Development</button>
+                    <button class="tab-btn" data-tab="mobile">Mobile Apps</button>
+                    <button class="tab-btn" data-tab="design">UI/UX Design</button>
+                </div>
+                <div class="tab-content">
+                    <div id="web" class="tab-panel active">
+                        <h3>Web Development Projects</h3>
+                        <p>Creating responsive, interactive websites using modern technologies like HTML5, CSS3, and JavaScript. Focus on user experience and performance optimization.</p>
+                        <ul>
+                            <li>E-commerce platforms</li>
+                            <li>Portfolio websites</li>
+                            <li>Progressive web apps</li>
+                        </ul>
+                    </div>
+                    <div id="mobile" class="tab-panel">
+                        <h3>Mobile Application Development</h3>
+                        <p>Building cross-platform mobile applications with seamless user interfaces and robust functionality for both iOS and Android platforms.</p>
+                        <ul>
+                            <li>Native iOS apps</li>
+                            <li>Android applications</li>
+                            <li>React Native solutions</li>
+                        </ul>
+                    </div>
+                    <div id="design" class="tab-panel">
+                        <h3>UI/UX Design Services</h3>
+                        <p>Crafting intuitive user interfaces and delightful user experiences through research, prototyping, and iterative design processes.</p>
+                        <ul>
+                            <li>User research & personas</li>
+                            <li>Wireframing & prototyping</li>
+                            <li>Visual design systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What technologies do you specialize in?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I specialize in modern web technologies including JavaScript (ES6+), React, Node.js, HTML5, CSS3, and various frameworks and libraries for building scalable web applications.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a typical project take?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Project timelines vary based on complexity and requirements. Simple websites typically take 2-4 weeks, while complex web applications can take 2-6 months. I provide detailed timelines during the planning phase.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide ongoing support and maintenance?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! I offer comprehensive support packages including bug fixes, security updates, performance monitoring, and feature enhancements to keep your web presence running smoothly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="form-section">
+            <h2>Get In Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name *</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                    <span class="error-message" id="phoneError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="error-message" id="passwordError"></span>
+                    <div class="password-requirements">
+                        <small>Password must be at least 8 characters with uppercase, lowercase, number, and special character.</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectType">Project Type</label>
+                    <select id="projectType" name="projectType">
+                        <option value="">Select a project type</option>
+                        <option value="website">Website Development</option>
+                        <option value="webapp">Web Application</option>
+                        <option value="mobile">Mobile App</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to newsletter for updates and tips
+                    </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the Terms of Service and Privacy Policy *
+                    </label>
+                    <span class="error-message" id="termsError"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <h3>✅ Message Sent Successfully!</h3>
+                <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Interactive Web Experience. Built with vanilla JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
